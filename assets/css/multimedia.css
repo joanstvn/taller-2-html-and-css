@@ -133,7 +133,7 @@ iframe {
   display: block;
 }
 
-/* Responsive */
+/* Responsive móvil */
 
 @media (max-width: 900px) {
   .bento-grid {

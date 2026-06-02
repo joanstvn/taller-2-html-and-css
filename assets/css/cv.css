@@ -1,4 +1,4 @@
-
+/* Variables globales CSS*/
 :root {
     /* ── Paleta Principal ── */
     --clr-dark: #1a1a1a;
@@ -64,20 +64,20 @@ img {
     display: block;
 }
 
-/* CONTENEDOR DE PÁGINA */
+/* Contenedor de página */
 .cv-page {
     max-width: 960px;
     margin: 0 auto;
-    background-color: #ffffff;
+    background-color: var(--clr-body-bg);
     padding: 20px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
     border-radius: 16px;
     overflow: hidden;
 }
 
-/* CUADRÍCULA BENTO */
+/* Cuadrícula Bento */
 .bento-grid {
-    background-color: #ffffff;
+    background-color: var(--clr-body-bg);
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     gap: var(--gap);
@@ -93,9 +93,9 @@ img {
 }
 
 
-/* VARIANTES DE TARJETA */
+/* VARIANTES DE TARJETAS */
 
-/* TARJETA DE NOMBRE Y ROL */
+/* Tarjeta de Rol */
 .card--role {
     grid-column: span 7;
     grid-row: span 1;
@@ -126,7 +126,7 @@ img {
 
 
 
-/* TARJETA DE FOTO */
+/* Tarjeta de foto */
 .card--photo {
     grid-column: span 5;
     grid-row: span 1;
@@ -146,7 +146,7 @@ img {
     object-fit: cover;
 }
 
-/* TARJETA DE FRASE MOTIVACIONAL */
+/* Tarjeta de mensaje motivacional */
 .card--message {
     grid-column: span 12;
     background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url('../img/cieloo.webp');
@@ -169,7 +169,7 @@ img {
     text-shadow: 0 4px 12px rgba(0, 0, 0, 0.8);
 }
 
-/* TARJETA DE CONTACTO */
+/* Tarjeta de Contacto */
 .card--contact {
     grid-column: span 12;
     background-color: var(--clr-mint);
@@ -199,7 +199,7 @@ img {
     opacity: 0.7;
 }
 
-/* TARJETA SOBRE MÍ */
+/* Tarjeta sobre mí */
 .card--about {
     grid-column: span 6;
     background-color: var(--clr-blue-soft);
@@ -220,7 +220,7 @@ img {
     line-height: 1.65;
 }
 
-/* TARJETA DE HABILIDADES */
+/* Tarjeta de Habilidades */
 .card--skills {
     grid-column: span 6;
     background-color: var(--clr-peach);
@@ -253,7 +253,7 @@ img {
     text-transform: uppercase;
 }
 
-/* TARJETA DE HERRAMIENTAS */
+/* Tarjeta de herraminentas */
 .card--tools {
     grid-column: span 7;
     background-color: var(--clr-pink-soft);
@@ -320,7 +320,7 @@ img {
     background-color: #e0f7fa;
 }
 
-/* TARJETA DE EXPERIENCIA LABORAL */
+/* Tarjeta de experiencia laboral */
 .card--experience {
     grid-column: span 5;
     background-color: var(--clr-yellow);
@@ -370,7 +370,7 @@ img {
     line-height: 1.6;
 }
 
-/* TARJETA DE EDUCACIÓN */
+/* Tarjeta de educacion */
 .card--education {
     grid-column: span 6;
     background-color: var(--clr-blue-soft);
@@ -412,7 +412,7 @@ img {
     line-height: 1.6;
 }
 
-/* TARJETA DE CERTIFICACIONES */
+/* Tarjeta de certificaciones */
 .card--certs {
     grid-column: span 6;
     background-color: var(--clr-mint);
@@ -445,7 +445,7 @@ img {
     margin-top: 4px;
 }
 
-/* TARJETA DE PASATIEMPOS */
+/* Tarjeta de pasatiempos */
 .card--hobbies {
     grid-column: span 5;
     background-color: var(--clr-peach);
@@ -477,7 +477,7 @@ img {
     background-color: rgba(255, 255, 255, 0.6);
 }
 
-/* TARJETA DE FRASE CON IMAGEN */
+/* Tarjeta de frase motivacional */
 .card--love {
     grid-column: span 7;
     background-color: var(--clr-lavender);
@@ -506,10 +506,9 @@ img {
     height: 100%;
     object-fit: cover;
     transform: scale(1.27);
-    /* 15% de zoom */
 }
 
-/* PIE DE PÁGINA */
+/* Pie de página */
 .main-footer {
     position: relative;
     overflow: hidden;
@@ -525,7 +524,7 @@ img {
 
 
 
-/* RESPONSIVO: TABLETA */
+/* RESPONSIVO: Tableta */
 @media (max-width: 900px) {
     .bento-grid {
         grid-template-columns: repeat(6, 1fr);
@@ -587,7 +586,7 @@ img {
     }
 }
 
-/* RESPONSIVO: MÓVIL */
+/* RESPONSIVO: Móvil */
 @media (max-width: 600px) {
     body {
         padding: 10px;
