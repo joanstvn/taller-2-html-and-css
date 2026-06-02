@@ -68,7 +68,7 @@ img {
 .cv-page {
     max-width: 960px;
     margin: 0 auto;
-    background-color: var(--clr-body-bg);
+    background-color: var(--clr-white);
     padding: 20px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
     border-radius: 16px;
@@ -77,7 +77,7 @@ img {
 
 /* Cuadrícula Bento */
 .bento-grid {
-    background-color: var(--clr-body-bg);
+    background-color: var(--clr-white);
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     gap: var(--gap);
