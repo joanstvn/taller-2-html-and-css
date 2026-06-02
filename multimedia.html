@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="es-CO">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TALLER-2</title>
+
+    <!-- TAGS SEO -->
+    <meta name="author"      content="Joan Stiven Rios Valderrama" />
+    <meta name="description" content="Taller #2 de HTML y CSS — Multimedia: video, audio e imagen" />
+    <meta name="keywords"    content="Desarrollo, Frontend, Maquetado Web, HTML, CSS, Multimedia" />
+
+    <!-- TAGS Mobile / PWA -->
+    <meta name="theme-color"                           content="#1a1a1a" />
+    <meta name="MobileOptimized"                       content="width" />
+    <meta name="HandheldFriendly"                      content="true" />
+    <meta name="mobile-web-app-capable"                content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <link rel="shortcut icon" href="./assets/img/logo.png" type="image/png" />
+
+    <link rel="stylesheet" href="./assets/css/base.css" />
+    <link rel="stylesheet" href="./assets/css/multimedia.css" />
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <header class="header">
+      <h1>TALLER-2</h1>
+
+      <nav class="nav" aria-label="Navegación principal">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="index.html">Inicio</a></li>
+          <li class="nav__item"><a href="grid.html">Grid</a></li>
+          <li class="nav__item"><a href="multimedia.html" class="active">Multimedia</a></li>
+          <li class="nav__item"><a href="contact.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- MAIN -->
+    <main>
+      <div class="bento-grid">
+
+        <!-- VIDEO CARD -->
+        <div class="bento-item bento-item--full">
+          <h2 class="section-title">Tag <code>&lt;video&gt;</code></h2>
+          <p class="section-description">
+            La etiqueta <code>&lt;video&gt;</code> permite embeber archivos de
+            video directamente en HTML, ya sea desde un archivo local o desde
+            un servicio en la nube como YouTube.
+          </p>
+
+          <div class="media-grid">
+
+            <!-- Local video file -->
+            <div class="media-card">
+              <h3>Video local</h3>
+              <div class="media-wrapper media-wrapper--flush">
+                <video controls>
+                  <source src="./assets/videos/local-video.mp4" type="video/mp4" />
+                  Tu navegador no soporta la etiqueta de video.
+                </video>
+              </div>
+            </div>
+
+            <!-- YouTube embed via iframe -->
+            <div class="media-card">
+              <h3>Video desde YouTube</h3>
+              <div class="media-wrapper media-wrapper--flush">
+                <iframe
+                  src="https://www.youtube.com/embed/IYbfbm6ek5g?si=jXixgO3cRTeo6zTA"
+                  title="Video de YouTube — ejemplo multimedia"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- AUDIO CARD -->
+        <div class="bento-item">
+          <h2 class="section-title">Tag <code>&lt;audio&gt;</code></h2>
+          <p class="section-description">
+            La etiqueta <code>&lt;audio&gt;</code> permite reproducir archivos
+            de sonido desde una fuente local o desde la nube.
+          </p>
+
+          <div class="media-grid">
+
+            <!-- Local audio files -->
+            <div class="media-card">
+              <h3>Audio local</h3>
+              <div class="media-wrapper">
+                <audio controls>
+                  <source src="./assets/audios/example-1.mp3" type="audio/mpeg" />
+                  Tu navegador no soporta la etiqueta de audio.
+                </audio>
+              </div>
+              <div class="media-wrapper">
+                <audio controls>
+                  <source src="./assets/audios/example-2.mp3" type="audio/mpeg" />
+                  Tu navegador no soporta la etiqueta de audio.
+                </audio>
+              </div>
+              <div class="media-wrapper">
+                <audio controls>
+                  <source src="./assets/audios/example-3.mp3" type="audio/mpeg" />
+                  Tu navegador no soporta la etiqueta de audio.
+                </audio>
+              </div>
+            </div>
+
+            <!-- Cloud audio files -->
+            <div class="media-card">
+              <h3>Audio desde la nube</h3>
+              <div class="media-wrapper">
+                <audio controls>
+                  <source
+                    src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"
+                    type="audio/mpeg"
+                  />
+                  Tu navegador no soporta la etiqueta de audio.
+                </audio>
+              </div>
+              <div class="media-wrapper">
+                <audio controls>
+                  <source
+                    src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3"
+                    type="audio/mpeg"
+                  />
+                  Tu navegador no soporta la etiqueta de audio.
+                </audio>
+              </div>
+              <div class="media-wrapper">
+                <audio controls>
+                  <source
+                    src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3"
+                    type="audio/mpeg"
+                  />
+                  Tu navegador no soporta la etiqueta de audio.
+                </audio>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- IMAGE CARD -->
+        <div class="bento-item">
+          <h2 class="section-title">Tag <code>&lt;img&gt;</code></h2>
+          <p class="section-description">
+            La etiqueta <code>&lt;img&gt;</code> permite incrustar imágenes
+            desde archivos locales o desde URLs externas.
+          </p>
+
+          <div class="media-grid">
+
+            <!-- Local image -->
+            <div class="media-card">
+              <h3>Imagen local</h3>
+              <div class="media-wrapper">
+                <img
+                  src="./assets/img/example-img-local.jpg"
+                  alt="Fotografía local de ejemplo"
+                />
+              </div>
+            </div>
+
+            <!-- Cloud image -->
+            <div class="media-card">
+              <h3>Imagen desde la nube</h3>
+              <div class="media-wrapper">
+                <img
+                  src="https://picsum.photos/600/400"
+                  alt="Fotografía aleatoria obtenida desde picsum.photos"
+                />
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <p>&copy; 2026 Joan Stiven Rios Valderrama. Todos los derechos reservados.</p>
+    </footer>
+
+  </body>
+</html>

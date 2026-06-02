@@ -1,0 +1,21 @@
+/* index.css — Styles for index.html only */
+
+
+/* Welcome section */
+
+.welcome {
+  background-color: var(--background);
+  border-radius: var(--radius-large);
+  padding: 40px;
+}
+
+.welcome h2 {
+  font-size: 2rem;
+  margin-bottom: 12px;
+}
+
+.welcome p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--text-muted);
+}

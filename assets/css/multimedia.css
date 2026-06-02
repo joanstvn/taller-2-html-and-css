@@ -1,0 +1,156 @@
+/* multimedia.css — Styles for multimedia.html only */
+
+
+/* Section heading */
+
+.section-title {
+  display: inline-block;
+  width: fit-content;
+  padding: 10px 20px;
+  background-color: var(--surface-media);
+  border-radius: var(--radius-pill);
+  font-size: 1.4rem;
+  margin-bottom: 12px;
+}
+
+.section-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  padding: 0 4px;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+}
+
+
+/* Bento grid: 2-column layout */
+
+.bento-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--gap);
+  width: 100%;
+}
+
+/* Full-width bento item */
+.bento-item--full {
+  grid-column: 1 / -1;
+}
+
+
+/* Bento item (card container) */
+
+.bento-item {
+  background-color: var(--background);
+  border-radius: var(--radius-large);
+  padding: var(--padding);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+
+/* Inner media grid */
+
+.media-grid {
+  display: flex;
+  gap: var(--gap);
+  align-items: stretch;
+}
+
+.media-card {
+  flex: 1;
+  padding: var(--padding);
+  background-color: var(--surface-media);
+  border-radius: var(--radius-medium);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.media-card h3 {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+
+/* Media element wrapper */
+
+.media-wrapper {
+  width: 100%;
+  background-color: var(--surface-media);
+  border-radius: var(--radius-medium);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: var(--padding);
+}
+
+
+/* Audio */
+
+audio {
+  width: 100%;
+  border-radius: var(--radius-medium);
+}
+
+
+/* Video */
+
+video {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: var(--radius-medium);
+  display: block;
+}
+
+
+/* Embedded iframe (YouTube) */
+
+iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: none;
+  border-radius: var(--radius-medium);
+  display: block;
+}
+
+
+/* Flush wrapper: no padding, for video and iframe */
+
+.media-wrapper--flush {
+  padding: 0;
+}
+
+
+/* Images */
+
+.media-wrapper img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: var(--radius-medium);
+  display: block;
+}
+
+/* Responsive */
+
+@media (max-width: 900px) {
+  .bento-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .bento-item--full {
+    grid-column: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .media-grid {
+    flex-direction: column;
+  }
+
+  .section-title {
+    font-size: 1.2rem;
+  }
+}

@@ -1,0 +1,144 @@
+/* grid.css — Styles for grid.html only */
+
+
+/* Section card wrapper */
+
+.section-card {
+  background-color: var(--background);
+  border-radius: var(--radius-large);
+  padding: var(--padding);
+  margin-bottom: var(--gap);
+}
+
+.section-title {
+  display: inline-block;
+  width: fit-content;
+  padding: 10px 20px;
+  background-color: var(--surface-media);
+  border-radius: var(--radius-pill);
+  font-size: 1.4rem;
+  margin-bottom: 12px;
+}
+
+.section-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  padding: 0 4px;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+}
+
+
+/* Grid layout demo
+  +-----------------------------+
+  |         header              |
+  +--------+--------------------+
+  | aside  |       main         |
+  +--------+---------+----------+
+  | aside  | section | section  |
+  +-----------------------------+
+  |         footer              |
+  +-----------------------------+
+*/
+
+.layout-grid {
+  display: grid;
+  grid-template-columns: 200px 1fr 1fr;
+  grid-template-areas:
+    "header  header  header"
+    "sidebar main    main"
+    "sidebar sec1    sec2"
+    "footer  footer  footer";
+  gap: 10px;
+  width: 100%;
+  margin-bottom: var(--gap);
+}
+
+/* Shared style for every grid cell */
+.grid-cell {
+  padding: 60px 20px;
+  background-color: var(--surface-tertiary);
+  border-radius: var(--radius-medium);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  text-align: center;
+}
+
+/* Grid area assignments */
+.cell--header  { grid-area: header; }
+.cell--sidebar { grid-area: sidebar; }
+.cell--main    { grid-area: main; }
+.cell--sec1    { grid-area: sec1; }
+.cell--sec2    { grid-area: sec2; }
+.cell--footer  { grid-area: footer; }
+
+
+/* Box model */
+
+.box-model {
+  width: 100%;
+  background-color: var(--background);
+  border-radius: var(--radius-large);
+  padding: var(--padding);
+  display: flex;
+  justify-content: center;
+}
+
+/* Each box model layer stacks visually */
+.box-margin,
+.box-border,
+.box-padding {
+  position: relative;
+  border-radius: var(--radius-large);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+}
+
+.box-margin  { background-color: #fff158c0; padding: 44px 40px 28px; }
+.box-border  { background-color: #ffa7a7ca; padding: 36px 34px 26px; border: 8px solid #33333338; }
+.box-padding { background-color: #d3ffbacb; padding: 32px 30px 24px; }
+
+/* Label shown at the top of each layer */
+.box-label {
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+/* Innermost content box */
+.box-content {
+  width: 100%;
+  min-height: 100px;
+  background-color: rgba(154, 210, 255, 0.485);
+  border-radius: var(--radius-medium);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  padding: 18px;
+}
+
+
+/* Responsive */
+
+@media (max-width: 700px) {
+  .layout-grid {
+    grid-template-columns: 80px 1fr;
+  }
+
+  .grid-cell {
+    padding: 20px 8px;
+    font-size: 0.8rem;
+  }
+}
